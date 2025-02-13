@@ -3,26 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saarthi Club - EVENTS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Events - Sarthi Club VIT Pune</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <header>
-        <h1>Welcome to Saarthi Club</h1>
-        <p>Your guide to opportunities and college life at VIT Pune</p>
+        <h1>Sarthi Events</h1>
+        <p>Empowering First-Year Students Through Engaging Activities</p>
     </header>
+
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="events.html">EVENTS</a>
-        <a href="about.html">ABOUT US</a>
-        <a href="contact.html">CONTACT</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html" class="active">Events</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="success-stories.html">Success Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <section>
-        <h2>EVENTS</h2>
-        <p>We organize workshops, seminars, and fun activities to help students develop skills and make new connections.</p>
-    </section>
+
+    <main class="container">
+        <section class="fade-in">
+            <div class="club-card">
+                <h2>Upcoming Events</h2>
+                <div class="event-item">
+                    <h3>Fresher's Orientation 2024</h3>
+                    <p>A comprehensive introduction to college life, academic programs, and campus facilities.</p>
+                    <p class="event-details">Date: Coming Soon</p>
+                    <a href="#" class="btn">Register Now</a>
+                </div>
+            </div>
+
+            <div class="club-card">
+                <h2>Regular Activities</h2>
+                <div class="event-item">
+                    <h3>Peer Mentoring Sessions</h3>
+                    <p>Weekly guidance sessions with experienced seniors to help with academics and college life.</p>
+                    <p class="event-details">Every Saturday | Online & Offline</p>
+                </div>
+
+                <div class="event-item">
+                    <h3>Academic Support Workshops</h3>
+                    <p>Subject-specific guidance and study tips from top-performing seniors.</p>
+                    <p class="event-details">Bi-weekly | Classroom Sessions</p>
+                </div>
+
+                <div class="event-item">
+                    <h3>Skill Development Programs</h3>
+                    <p>Learn essential technical and soft skills to enhance your college experience.</p>
+                    <p class="event-details">Monthly | Interactive Workshops</p>
+                </div>
+            </div>
+
+            <div class="club-card">
+                <h2>Past Events</h2>
+                <div class="event-item">
+                    <h3>Induction Program 2024</h3>
+                    <p>Successfully conducted online and offline induction sessions for new members.</p>
+                    <p class="event-meta">October 2024</p>
+                </div>
+
+                <div class="event-item">
+                    <h3>Fresher's Meet & Greet</h3>
+                    <p>Interactive session between freshers and senior students to share experiences and advice.</p>
+                    <p class="event-meta">September 2024</p>
+                </div>
+            </div>
+
+            <div class="club-card">
+                <h2>Suggest an Event</h2>
+                <form id="event-suggestion-form" onsubmit="return validateForm('event-suggestion-form')">
+                    <div class="form-group">
+                        <input type="text" id="event-name" name="event-name" placeholder="Event Name" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="event-description" name="event-description" placeholder="Event Description" required rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="suggested-by" name="suggested-by" placeholder="Your Name" required>
+                    </div>
+                    <button type="submit" class="btn">Submit Suggestion</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Saarthi Club, VIT Pune. All Rights Reserved.</p>
+        <p>&copy; 2024 Sarthi Club, VIT Pune. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/vit_pune_saarthi/" target="_blank">Follow us on Instagram</a>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

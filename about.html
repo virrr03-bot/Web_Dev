@@ -3,26 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saarthi Club - ABOUT US</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About - Sarthi Club VIT Pune</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <header>
-        <h1>Welcome to Saarthi Club</h1>
-        <p>Your guide to opportunities and college life at VIT Pune</p>
+        <h1>About Sarthi Club</h1>
+        <p>Your Guide to First Year at VIT Pune</p>
     </header>
+
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="events.html">EVENTS</a>
-        <a href="about.html">ABOUT US</a>
-        <a href="contact.html">CONTACT</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="success-stories.html">Success Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <section>
-        <h2>ABOUT US</h2>
-        <p>Saarthi Club is a student-run organization at VIT Pune focused on mentoring and guiding freshers to succeed in academics and extracurricular activities.</p>
-    </section>
+
+    <main class="container">
+        <section class="fade-in">
+            <div class="club-card">
+                <h2>Our Mission</h2>
+                <p>Sarthi Club is dedicated to supporting and empowering first-year students at VIT Pune. We serve as a bridge between freshers and senior students, helping new students navigate their academic journey with confidence.</p>
+            </div>
+
+            <div class="club-card">
+                <h2>What We Do</h2>
+                <ul class="features-list">
+                    <li>Provide academic guidance and support</li>
+                    <li>Organize orientation programs for freshers</li>
+                    <li>Facilitate peer mentoring programs</li>
+                    <li>Conduct skill development workshops</li>
+                    <li>Create networking opportunities</li>
+                    <li>Support personal and professional growth</li>
+                </ul>
+            </div>
+
+            <div class="club-card">
+                <h2>Why Choose Sarthi?</h2>
+                <p>As the official First-Year Student Council of VIT Pune, we understand the challenges that come with starting college life. Our experienced team of seniors and mentors is here to help you:</p>
+                <ul class="features-list">
+                    <li>Adapt to college life seamlessly</li>
+                    <li>Excel in academics</li>
+                    <li>Develop essential skills</li>
+                    <li>Build lasting connections</li>
+                    <li>Explore opportunities for growth</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Saarthi Club, VIT Pune. All Rights Reserved.</p>
+        <p>&copy; 2024 Sarthi Club, VIT Pune. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/vit_pune_saarthi/" target="_blank">Follow us on Instagram</a>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

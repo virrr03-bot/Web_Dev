@@ -27,26 +27,41 @@ class Club {
 // Form Validation
 function validateForm(formId) {
     const form = document.getElementById(formId);
-    const inputs = form.getElementsByTagName('input');
+    if (!form) return true;
+
+    const inputs = form.querySelectorAll('input, textarea');
     let isValid = true;
 
-    for (let input of inputs) {
-        if (input.hasAttribute('required') && !input.value) {
-            input.classList.add('invalid');
+    inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
             isValid = false;
-        } else {
-            input.classList.remove('invalid');
-        }
-
-        if (input.type === 'email') {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(input.value)) {
-                input.classList.add('invalid');
+            showError(input, 'This field is required');
+        } else if (input.type === 'email' && input.value) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(input.value)) {
                 isValid = false;
+                showError(input, 'Please enter a valid email address');
             }
         }
-    }
+    });
+
     return isValid;
+}
+
+function showError(input, message) {
+    const errorDiv = input.nextElementSibling || document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = message;
+    if (!input.nextElementSibling) {
+        input.parentNode.insertBefore(errorDiv, input.nextSibling);
+    }
+    input.classList.add('error');
+
+    // Remove error after 3 seconds
+    setTimeout(() => {
+        errorDiv.remove();
+        input.classList.remove('error');
+    }, 3000);
 }
 
 // Email Function
@@ -89,14 +104,80 @@ function updateClubList() {
     }
 }
 
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', function() {
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Animations on Scroll
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Animate elements with fade-in class
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Initialize form validation
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            if (!validateForm(form.id)) {
+                e.preventDefault();
+            }
+        });
+    });
+
+    // Add video background if not present
+    if (!document.querySelector('#bg-video')) {
+        const videoBackground = document.createElement('div');
+        videoBackground.className = 'video-background';
+        videoBackground.innerHTML = `
+            <video autoplay muted loop id="bg-video">
+                <source src="assets/background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
+        document.body.insertBefore(videoBackground, document.body.firstChild);
+    }
+
     initializeClubs();
     updateClubList();
-    
+
     // Setup video background
     const video = document.getElementById('bg-video');
     if (video) {
         video.playbackRate = 0.75;
     }
+
+    // Add smooth hover effects to all interactive elements
+    document.querySelectorAll('.btn, .club-card, .feature-card').forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+
+        element.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
 });

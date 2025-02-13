@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committee Management - VIT Clubs Portal</title>
+    <title>Committee - Sarthi Club VIT Pune</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,14 +15,15 @@
     </div>
 
     <header>
-        <h1>VIT Clubs Portal</h1>
-        <p>Committee Management</p>
+        <h1>Our Committee</h1>
+        <p>Meet the Team Behind Sarthi Club</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="clubs.html">Clubs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="committee.html" class="active">Committee</a></li>
             <li><a href="success-stories.html">Success Stories</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -30,35 +31,71 @@
     </nav>
 
     <main class="container">
-        <section id="committee" class="fade-in">
-            <h2>Update Committee</h2>
-            <form id="committee-form" onsubmit="return validateForm('committee-form')">
-                <div class="form-group">
-                    <label for="club-select">Select Club:</label>
-                    <select id="club-select" required>
-                        <!-- Options will be loaded dynamically -->
-                    </select>
+        <section class="fade-in">
+            <div class="club-card">
+                <h2>Faculty Advisors</h2>
+                <div class="committee-member">
+                    <h3>Faculty Coordinator</h3>
+                    <p>Prof. Rajesh Kumar</p>
+                    <p>Department of Computer Engineering</p>
                 </div>
-                <div class="form-group">
-                    <label for="member-name">Member Name:</label>
-                    <input type="text" id="member-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="member-position">Position:</label>
-                    <input type="text" id="member-position" required>
-                </div>
-                <button type="submit">Add Committee Member</button>
-            </form>
+            </div>
 
-            <div id="current-committee" class="committee-list">
-                <h3>Current Committee Members</h3>
-                <!-- Committee members will be loaded dynamically -->
+            <div class="club-card">
+                <h2>Student Council 2024-25</h2>
+                <div class="committee-member">
+                    <h3>President</h3>
+                    <p>Rahul Sharma</p>
+                    <p>Third Year, Computer Engineering</p>
+                </div>
+
+                <div class="committee-member">
+                    <h3>Vice President</h3>
+                    <p>Priya Patel</p>
+                    <p>Third Year, Electronics Engineering</p>
+                </div>
+
+                <div class="committee-member">
+                    <h3>General Secretary</h3>
+                    <p>Amit Kumar</p>
+                    <p>Second Year, Mechanical Engineering</p>
+                </div>
+            </div>
+
+            <div class="club-card">
+                <h2>Department Coordinators</h2>
+                <div class="committee-member">
+                    <h3>Academic Support</h3>
+                    <p>Sneha Desai</p>
+                    <p>Third Year, Computer Science</p>
+                </div>
+
+                <div class="committee-member">
+                    <h3>Events & Activities</h3>
+                    <p>Aditya Singh</p>
+                    <p>Third Year, Electronics</p>
+                </div>
+
+                <div class="committee-member">
+                    <h3>Public Relations</h3>
+                    <p>Ravi Verma</p>
+                    <p>Second Year, IT</p>
+                </div>
+            </div>
+
+            <div class="club-card">
+                <h2>Join the Committee</h2>
+                <p>Interested in becoming a part of Sarthi Club's committee? Applications for various positions open at the beginning of each academic year.</p>
+                <a href="contact.html" class="btn">Contact Us</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 VIT Pune Clubs Portal. All Rights Reserved.</p>
+        <p>&copy; 2024 Sarthi Club, VIT Pune. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/vit_pune_saarthi/" target="_blank">Follow us on Instagram</a>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
