@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - VIT Clubs Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <h1>VIT Clubs Portal</h1>
+        <p>Success Stories</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clubs.html">Clubs</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="success-stories.html" class="active">Success Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="success-stories" class="fade-in">
+            <h2>Share Your Success Story</h2>
+            <form id="story-form" onsubmit="return validateForm('story-form')">
+                <div class="form-group">
+                    <label for="story-club">Select Club:</label>
+                    <select id="story-club" required>
+                        <!-- Options will be loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="story-title">Story Title:</label>
+                    <input type="text" id="story-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="story-content">Story Content:</label>
+                    <textarea id="story-content" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email-list">Email to Students:</label>
+                    <input type="email" id="email-list" multiple placeholder="Enter student email addresses">
+                </div>
+                <button type="submit">Share Success Story</button>
+            </form>
+
+            <div id="stories-list" class="stories-container">
+                <h3>Recent Success Stories</h3>
+                <!-- Success stories will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VIT Pune Clubs Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
