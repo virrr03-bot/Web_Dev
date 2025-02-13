@@ -1,77 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sarthi Club - VIT Pune</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <header>
-        <h1>Welcome to Sarthi Club</h1>
-        <p>Connecting, Supporting and Empowering Freshers at VIT Pune</p>
-    </header>
-
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+  </head>
+  <body>
     <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="committee.html">Committee</a></li>
-            <li><a href="success-stories.html">Success Stories</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="success-stories.html">Success Stories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
 
+    <section class="hero-section">
+      <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+          <source src="assets/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1>Welcome to Sarthi Club</h1>
+        <p>
+          Empowering freshers at VIT Pune through mentorship, guidance, and
+          support
+        </p>
+        <div class="cta-buttons">
+          <a href="about.html" class="cta-button primary-cta">Learn More</a>
+          <a href="contact.html" class="cta-button secondary-cta">Join Us</a>
+        </div>
+      </div>
+
+      <div class="scroll-down">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+        </svg>
+      </div>
+    </section>
+
     <main class="container">
-        <section class="fade-in">
-            <div class="feature-card">
-                <h2>Your Guide to VIT Pune</h2>
-                <p>As the official First-Year Student Council of VIT Pune, we're here to make your first-year experience unforgettable. Get guidance, support, and connect with fellow students!</p>
-            </div>
+      <section class="fade-in">
+        <div class="club-card">
+          <h2>Our Mission</h2>
+          <p>
+            At Sarthi Club, we believe in creating a supportive environment for
+            freshers at VIT Pune. Our mission is to help new students navigate
+            their academic journey with confidence and success.
+          </p>
+        </div>
 
-            <div class="club-card">
-                <h2>What We Offer</h2>
-                <ul class="features-list">
-                    <li>Academic Support & Guidance</li>
-                    <li>Peer Mentoring Programs</li>
-                    <li>Cultural & Technical Events</li>
-                    <li>Skill Development Workshops</li>
-                    <li>Networking Opportunities</li>
-                </ul>
-            </div>
+        <div class="club-card">
+          <h2>What We Offer</h2>
+          <ul class="features-list">
+            <li>Academic Support & Guidance</li>
+            <li>Peer Mentoring Programs</li>
+            <li>Cultural & Technical Events</li>
+            <li>Skill Development Workshops</li>
+            <li>Networking Opportunities</li>
+          </ul>
+        </div>
 
-            <div class="club-card">
-                <h2>Upcoming Events</h2>
-                <div class="event-item">
-                    <h3>Fresher's Orientation</h3>
-                    <p>Get to know your college, departments, and meet your seniors</p>
-                    <a href="events.html" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <div class="club-card">
-                <h2>Join Sarthi Club</h2>
-                <p>Be part of VIT Pune's vibrant first-year community. Join us in creating memorable experiences and developing essential skills for your academic journey.</p>
-                <a href="contact.html" class="btn">Join Now</a>
-            </div>
-        </section>
+        <div class="club-card">
+          <h2>Upcoming Events</h2>
+          <div class="event-item">
+            <h3>Fresher's Orientation 2024</h3>
+            <p>
+              Join us for an interactive session to learn about college life and
+              meet your seniors.
+            </p>
+            <a href="events.html" class="btn">View Details</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Sarthi Club, VIT Pune. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/vit_pune_saarthi/" target="_blank">Follow us on Instagram</a>
-        </div>
+      <p>&copy; 2024 Sarthi Club, VIT Pune. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/vit_pune_saarthi/" target="_blank"
+          >Follow us on Instagram</a>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
