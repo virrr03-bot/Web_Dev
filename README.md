@@ -1,21 +1,22 @@
-# VIT Clubs Portal
+# VIT Clubs Management Website
 
 An interactive website for managing various clubs at Vishwakarma Institute of Technology.
 
 ## Features
-
-- Video background for enhanced visual appeal
-- Interactive club committee management
-- Success stories section with email functionality
-- Client-side storage for data persistence
-- Form validation using JavaScript
-- Modern and responsive design using CSS3
+- Responsive design using Bootstrap
+- Background video on homepage
+- Object-oriented JavaScript for club management
+- Interactive forms for:
+  - Club committee updates
+  - Success stories management
+- Client-side credential storage
+- Form validation
+- Email functionality for success stories
 
 ## Setup Instructions
-
-1. Place the website files in your htdocs folder
-2. Add a background video file (MP4 format) in the `assets` folder named `background.mp4`
-3. Open `index.html` in a web browser to view the website
+1. Clone the repository
+2. Open the project in a web browser
+3. Use the login/register functionality to access club management features
 
 ## Project Structure
 
@@ -31,11 +32,16 @@ An interactive website for managing various clubs at Vishwakarma Institute of Te
 ```
 
 ## Technologies Used
-
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- Local Storage for client-side data persistence
+- jQuery
+- Bootstrap 5
+- Local Storage API
+
+## Local Storage Structure
+- `clubCredentials`: Stores user login information
+- `clubData`: Stores club-specific information like committees and success stories
 
 ## Browser Compatibility
 
@@ -43,6 +49,15 @@ An interactive website for managing various clubs at Vishwakarma Institute of Te
 - Firefox
 - Safari
 - Edge
+
+## Security Note
+Credentials are stored client-side and should only be used for demonstration purposes. 
+For a production environment, implement server-side authentication.
+
+## Future Improvements
+- Implement server-side authentication
+- Add more robust error handling
+- Create a backend API for email distribution
 
 ## Note
 

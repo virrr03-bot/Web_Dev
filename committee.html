@@ -91,6 +91,33 @@
         </section>
     </main>
 
+    <div class="container mt-5">
+        <h2>Club Committee Management</h2>
+        
+        <!-- Club Committee Update Form -->
+        <form id="committee-form">
+            <div class="mb-3">
+                <label for="club-select" class="form-label">Select Club</label>
+                <select id="club-select" class="form-select" required>
+                    <option value="">Choose a Club</option>
+                    <option value="technical">Technical Club</option>
+                    <option value="cultural">Cultural Club</option>
+                    <option value="sports">Sports Club</option>
+                    <option value="literary">Literary Club</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Committee Member Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="position" class="form-label">Position</label>
+                <input type="text" class="form-control" id="position" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Committee</button>
+        </form>
+    </div>
+
     <footer>
         <p>&copy; 2024 Sarthi Club, VIT Pune. All Rights Reserved.</p>
         <div class="social-links">

@@ -98,6 +98,30 @@
       </section>
     </main>
 
+    <div class="container mt-5">
+      <h2>Success Stories Management</h2>
+      
+      <!-- Success Stories Update Form -->
+      <form id="success-story-form">
+        <div class="mb-3">
+          <label for="club-select" class="form-label">Select Club</label>
+          <select id="club-select" class="form-select" required>
+            <option value="">Choose a Club</option>
+            <option value="technical">Technical Club</option>
+            <option value="cultural">Cultural Club</option>
+            <option value="sports">Sports Club</option>
+            <option value="literary">Literary Club</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="story" class="form-label">Success Story</label>
+          <textarea class="form-control" id="story" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Success Story</button>
+        <button type="button" class="btn btn-secondary" id="email-stories">Email Stories</button>
+      </form>
+    </div>
+
     <footer>
       <p>&copy; 2024 VIT Pune Clubs Portal. All Rights Reserved.</p>
     </footer>
